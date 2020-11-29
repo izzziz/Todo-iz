@@ -4,4 +4,4 @@ Todo-iz is a todo list application inspired by the clear todo app. It lets you m
 
 ## Screenshot
 
-![](Full/todoiz.screenshot.png)
+![](Screenshots/todoiz.screenshot.png)
