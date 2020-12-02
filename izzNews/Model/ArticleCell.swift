@@ -13,7 +13,6 @@ class ArticleCell: UITableViewCell {
     @IBOutlet weak var articleImageView: UIImageView!
     
     var articleToDisplay:Article?
-    
     func displayArticle(_ article:Article) {
         
         // Clean up the cell befroe displaying the next article
@@ -35,16 +34,15 @@ class ArticleCell: UITableViewCell {
             
         }, completion: nil)
         
-
         // Download and display the image
         
         // Check that the article actually has an image
-        guard articleToDisplay!.urlToImages != nil else {
+        guard articleToDisplay!.urlToImage != nil else {
             return
         }
         
         // Create url string
-        let urlString = articleToDisplay!.urlToImages!
+        let urlString = articleToDisplay!.urlToImage!
         
         // Check the cachemanager before downloading any image data
         if let imageData = CacheManager.retrieveData(urlString) {
@@ -84,7 +82,7 @@ class ArticleCell: UITableViewCell {
                 CacheManager.saveData(urlString, data!)
                 
                 // Check if the URLString that the data task went off to download matches the article this cell is set to display
-                if self.articleToDisplay!.urlToImages == urlString {
+                if self.articleToDisplay!.urlToImage == urlString {
                     
                     DispatchQueue.main.async {
                         // Display the image data in the imageView
