@@ -1,7 +1,9 @@
 # Todoiz
 
-## About
-Todo-iz is a todo list application inspired by the clear todo app. It lets you make different todo lists items that show up as individual colours and when you add more items it creates an awesome gradient colour which goes from lighter to darker. 
+Todo-iz is a todo list Application inspired by the clear Todo app which incorporates Realm Database as the backend. 
+
+## Description
+The app consits of two ViewControllers - a Main ViewController and a Detailed ViewController. The Main ViewController has a TableView of all the To-do list items. When you add a list of items,then you add additional items to the list, it makes a different todo list items that show up as individual colours and when you add more items it creates a amazing gradient colour which goes from lighter to darker. 
 
 ## Tech
 - This application incorporates the use of cocoaPods for the gradient feature and for the swipe to delete capability. 
